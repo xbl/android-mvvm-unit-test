@@ -15,7 +15,11 @@ public class Balancer {
         if (replaced.equals("")) {
             return true;
         }
-        return false;
+
+        if (replaced.equals(str)) {
+            return false;
+        }
+        return isBalance(replaced);
     }
 
     public void onClick(ViewModel vm) {
