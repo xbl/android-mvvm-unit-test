@@ -39,7 +39,10 @@ public class BalancerTest {
             "{}}, false",
             "[()], true",
             "({}), true",
-            "({(){}[]}), true"
+            "({(){}[]}), true",
+            "({(){}[]})), false",
+            "({(){}[{[]}]}), true",
+            "0, true",
     })
     public void given_string_is_parentheses__when_isBalance_then_result_to_be_false(String str, Boolean result) {
         Balancer balancer = new Balancer();
