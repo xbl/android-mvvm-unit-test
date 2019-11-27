@@ -18,4 +18,12 @@ public class BalancerTest {
 
         assertEquals(true, balancer.isBalance(""));
     }
+
+    @Test
+    @DisplayName("Given 字符串为空, When 调用 isBalance，Then 返回 true")
+    public void given_string_is_parentheses__when_isBalance_then_result_to_be_true() {
+        Balancer balancer = new Balancer();
+
+        assertEquals(true, balancer.isBalance("()"));
+    }
 }

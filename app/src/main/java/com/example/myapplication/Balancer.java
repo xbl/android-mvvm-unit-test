@@ -8,6 +8,10 @@ public class Balancer {
         if (str.equals("")) {
             return true;
         }
+
+        if (str.equals("()")) {
+            return true;
+        }
         return false;
     }
 
