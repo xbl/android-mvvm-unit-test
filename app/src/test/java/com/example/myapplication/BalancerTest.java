@@ -29,6 +29,14 @@ public class BalancerTest {
         assertEquals(true, balancer.isBalance("()"));
     }
 
+    @Test
+    @DisplayName("Given 字符串为 null, When 调用 isBalance，Then 返回 true")
+    public void given_string_is_parentheses_null_when_isBalance_then_result_to_be_true() {
+        Balancer balancer = new Balancer();
+
+        assertEquals(true, balancer.isBalance(null));
+    }
+
     @ParameterizedTest(name = "Given 字符串为{0}, When 调用 isBalance，Then 返回 {1}")
     @CsvSource({
             "()), false",
@@ -43,6 +51,7 @@ public class BalancerTest {
             "({(){}[]})), false",
             "({(){}[{[]}]}), true",
             "0, true",
+            "function() {alert(1);}, true",
     })
     public void given_string_is_parentheses__when_isBalance_then_result_to_be_false(String str, Boolean result) {
         Balancer balancer = new Balancer();

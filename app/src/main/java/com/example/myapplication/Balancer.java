@@ -10,7 +10,7 @@ public class Balancer {
     private List<String> symbolList = Arrays.asList("(", ")", "[", "]", "{", "}");
 
     public boolean isBalance(String str) {
-        if (str.equals("")) {
+        if (str == null || str.equals("")) {
             return true;
         }
 
