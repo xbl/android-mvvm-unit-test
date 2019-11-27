@@ -5,6 +5,9 @@ import com.example.myapplication.vm.ViewModel;
 public class Balancer {
 
     public boolean isBalance(String str) {
+        if (str.equals("")) {
+            return true;
+        }
         return false;
     }
 
