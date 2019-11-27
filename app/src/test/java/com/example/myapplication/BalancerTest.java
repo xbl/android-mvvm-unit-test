@@ -30,7 +30,13 @@ public class BalancerTest {
     }
 
     @ParameterizedTest(name = "Given 字符串为{0}, When 调用 isBalance，Then 返回 {1}")
-    @CsvSource({"()), false", "()(), true"})
+    @CsvSource({
+            "()), false",
+            "()(), true",
+            "[], true",
+            "[]], false",
+            "{}, true"
+    })
     public void given_string_is_parentheses__when_isBalance_then_result_to_be_false(String str, Boolean result) {
         Balancer balancer = new Balancer();
 

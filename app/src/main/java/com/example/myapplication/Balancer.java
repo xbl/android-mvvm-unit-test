@@ -10,6 +10,8 @@ public class Balancer {
         }
 
         String replaced = str.replaceAll("\\(\\)", "");
+        replaced = replaced.replaceAll("\\[\\]", "");
+        replaced = replaced.replaceAll("\\{\\}", "");
         if (replaced.equals("")) {
             return true;
         }
