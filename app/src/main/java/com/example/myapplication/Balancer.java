@@ -9,7 +9,8 @@ public class Balancer {
             return true;
         }
 
-        if (str.equals("()")) {
+        String replaced = str.replaceAll("\\(\\)", "");
+        if (replaced.equals("")) {
             return true;
         }
         return false;
